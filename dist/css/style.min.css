@@ -1,0 +1,271 @@
+﻿html {
+  font-size: 20px;
+  box-sizing: border-box;
+}
+body {
+  margin: unset;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Signika Negative", sans-serif;
+  padding: unset;
+  margin: unset;
+}
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 24px;
+  background-color: #f3eef8;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -moz-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+}
+.page-nav .create-project form {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+.page-nav .create-project form input[type="text"] {
+  height: 100%;
+  max-width: 240px;
+  border: 2px solid #9977c3;
+  border-right: none;
+  text-indent: 6px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.page-nav .create-project form input[type="submit"] {
+  all: initial;
+  box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -moz-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  border: 2px solid #9977c3;
+  border-radius: 5px;
+  background-color: #77c37a;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  height: 100%;
+  width: 2rem;
+  border-left: none;
+  margin-left: -2px;
+  padding: 1px;
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+@media screen and (max-width: 768px) {
+  .projects-list {
+    justify-content: center;
+  }
+}
+.project {
+  min-width: 300px;
+  max-width: 600px;
+  margin: 6px;
+  border: 3px solid #9977c3;
+  border-radius: 5px;
+}
+.project .project-heading {
+  text-align: center;
+}
+.project .project-heading .project-title {
+  padding: 6px;
+}
+.project div.divider {
+  background-color: #9977c3;
+  height: 6px;
+  width: 40px;
+  margin: auto;
+}
+.project ul.project-items {
+  list-style: "🥚";
+}
+@media screen and (max-width: 736px) {
+  .project ul.project-items {
+    padding-left: 0;
+  }
+}
+.project ul.project-items li.project-task {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+@media screen and (max-width: 736px) {
+  .project ul.project-items li.project-task {
+    list-style: none;
+  }
+  .project ul.project-items li.project-task::before {
+    content: "🥚";
+    margin-left: -20px;
+    padding: 20px;
+  }
+}
+.project ul.project-items li.project-task .details-complete {
+  width: max-content;
+  padding: 6px;
+  display: inline-block;
+  margin-right: 6px;
+  border: 2px solid #77c37a;
+  border-radius: 5px;
+  background-color: #f3eef8;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  color: #77c37a;
+}
+.project ul.project-items li.project-task .details-delete {
+  width: max-content;
+  padding: 6px;
+  display: inline-block;
+  margin-right: 6px;
+  border: 2px solid #9977c3;
+  border-radius: 5px;
+  background-color: #f3eef8;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  color: #9977c3;
+}
+.project ul.project-items li.project-task.checkedoff {
+  text-decoration: line-through;
+  list-style: "🐥";
+}
+@media screen and (max-width: 736px) {
+  .project ul.project-items li.project-task.checkedoff {
+    list-style: none;
+  }
+  .project ul.project-items li.project-task.checkedoff::before {
+    content: "🐥";
+    margin-left: -20px;
+    padding: 20px;
+  }
+}
+.project ul.project-items li.project-task.checkedoff .details-complete {
+  color: #77c37a;
+  text-decoration: none;
+}
+.project ul.project-items li.project-task::marker {
+  font-size: 1.5rem;
+  color: #77c37a;
+}
+.project ul.project-items li.project-task ul.project-task-details {
+  list-style: none;
+}
+.project ul.project-items li.project-task ul.project-task-details li {
+  cursor: default;
+}
+.project ul.project-items li.project-task ul.project-task-details li.button {
+  cursor: pointer;
+}
+.project ul.project-items li.project-task ul.project-task-details.hidden {
+  display: none;
+}
+.project ul.project-items .task-form {
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 6px;
+  grid-row-gap: 2px;
+  padding: 6px 0;
+  margin: auto;
+}
+@media screen and (min-width: 736px) {
+  .project ul.project-items .task-form {
+    padding-right: 40px;
+  }
+}
+.project ul.project-items .task-form input {
+  font-size: 0.75rem;
+  border: 2px solid #77c37a;
+  border-radius: 5px;
+  text-indent: 6px;
+}
+.project ul.project-items .task-form select {
+  background-color: transparent;
+  border: 2px solid #77c37a;
+  border-radius: 5px;
+}
+.project ul.project-items .task-form .task-name {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+.project ul.project-items .task-form .task-due {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.project ul.project-items .task-form .task-priority {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.project ul.project-items .task-form .task-description {
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+.project ul.project-items .task-form .button {
+  width: max-content;
+  padding: 6px;
+  display: inline-block;
+  margin-right: 6px;
+  border: 2px solid #77c37a;
+  border-radius: 5px;
+  background-color: #d6edd7;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  grid-row: 4/5;
+  grid-column: 1/2;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.project ul.project-items .task-form .button.task-form-cancel {
+  grid-column: 2/3;
+  background-color: #f3eef8;
+  border-color: #9977c3;
+}
+.project .add-new-task {
+  padding: 6px 12px;
+}
+.project .add-new-task .new-task-button {
+  width: max-content;
+  padding: 6px 12px;
+  margin: auto;
+  box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -moz-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  border: 2px solid #9977c3;
+  border-radius: 5px;
+  background-color: #77c37a;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+}
+.project .delete-project {
+  padding: 6px 12px;
+}
+.project .delete-project .delete-project-button {
+  width: max-content;
+  padding: 6px 12px;
+  margin: auto;
+  box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  -moz-box-shadow: 0px 3px 3px -3px rgba(153, 119, 195, 0.75);
+  border: 2px solid #9977c3;
+  border-radius: 5px;
+  background-color: #9977c3;
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+}
